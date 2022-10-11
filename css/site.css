@@ -1,0 +1,90 @@
+:root{
+    --jt-primary-color: #ff7384;
+    --jt-secondary-color: #ff993b;
+    --jt-dark-color: #1b1b1b;
+    --jt-light-color: #dfe3e4;
+    --jt-darker-color: #000000;
+
+    --jt-navbar-toggler-glow: rgba(255, 153, 59, .6);
+    --jt-navbar-toggler-color: #ff993b;
+
+
+}
+
+html, body{
+    height: 100%;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+.content{
+    flex: 1 0 auto;
+    margin-top: 4.75rem;
+}
+
+footer{
+    flex-shrink: 0;
+}
+
+.logoFly{
+    opacity:30%;
+    border-radius: 10px;
+}
+
+.logoFoot{
+    opacity: 30%;
+    border-radius: 10px;
+}
+.footer{
+    background: var(--jt-primary-color);
+    color: var(--jt-light-color);
+}
+
+.socialIcons{
+    color: var(--jt-light-color);
+    font-size: 2rem;
+    padding-left: .5rem;
+}
+
+.socialIcons:hover{
+    color: var(--jt-secondary-color);
+}
+
+#mainNav{
+    background-color: var(--jt-primary-color);
+}
+
+#mainNav button{
+    border-color: var(--jt-secondary-color);
+}
+
+.navbar-toggler{
+    color: var(--jt-navbar-toggler-glow);
+}
+
+.navbar-toggler-icon-jt{
+    color: var(--jt-navbar-toggler-color);
+    font-size: 1.5rem;
+
+}
+
+.checklist{
+    list-style-type: none;
+}
+
+.checklist>li i{
+    color: var(--jt-secondary-color);
+    padding-right: .5rem;
+}
+
+.devIcons{
+    font-size: 3rem;
+    padding-left: .5rem;
+}
+
+.appLogo{
+    max-width: 350px;
+}
