@@ -71,6 +71,14 @@ footer{
 
 }
 
+.even{
+    font-weight: bolder;
+}
+
+.odd{
+    font-weight: 100;
+}
+
 .checklist{
     list-style-type: none;
 }

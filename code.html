@@ -84,19 +84,74 @@
           <div class="col-12 col-lg-8">
             <pre class="line-numbers">
                     <code class="language-js">
-                        function displayMessage(){
+                        
+function getValues() {
+  //let startValue = parseInt(document.getElementById("startValue").value);
+  let startValue = document.getElementById("startValue").value;
+  let endValue = document.getElementById("endValue").value;
 
-    let msg = document.getElementById("message").value;
+  //parse the values in to intergers
 
-    alert(msg);
+  startValue = parseInt(startValue);
+  endValue = parseInt(endValue);
+
+  // && is and or needs both to be true
+
+  if (Number.isInteger(startValue) && Number.isInteger(endValue)) {
+    
+    //generate the numbers based on user input
+
+    let numbers = generateNumbers(startValue, endValue);
+
+    //display results on page
+    displayNumbers(numbers);
+
+  } else {
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "Only intergers are allowed for Hundo",
+    });
+  }
+}
+
+function generateNumbers(startValue, endValue) {
+    let numbers = [];
+
+    for(let i = startValue; i <= endValue; i++){
+        numbers.push(i);
     }
+    return numbers;
+}
+
+function displayNumbers(numbers) {
+    let className="even";
+    let templateRows="";
+
+    for(let i = 0; i < numbers.length; i++){
+        let number = numbers[i];
+        //if when i divide this number, and the remainder is 0 then it is even
+        if(number % 2 == 0){
+            className = "even";
+
+        }else{
+            className = "odd";
+
+        }
+
+        templateRows += `<tr><td class="${className}">${number}</td></tr> `;
+
+    }
+    document.getElementById("results").innerHTML = templateRows;
+}
+
                     </code>
                 </pre>
           </div>
           <!--Code Docs-->
           <div class="col-12 col-lg-4">
             <p>The code is structured in one function.</p>
-            <h5>displayMessage</h5>
+            <h5>getValues, generateNumbers, displayNumbers</h5>
             <p>Prints out the message</p>
           </div>
         </div>
